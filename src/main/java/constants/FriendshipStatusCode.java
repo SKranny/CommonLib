@@ -1,4 +1,4 @@
-package dto.friendDto.constants;
+package constants;
 
 public enum FriendshipStatusCode {
 

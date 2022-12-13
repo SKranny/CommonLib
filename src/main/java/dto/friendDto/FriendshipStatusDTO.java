@@ -1,7 +1,7 @@
 package dto.friendDto;
 
 
-import dto.friendDto.constants.FriendshipStatusCode;
+import constants.FriendshipStatusCode;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
