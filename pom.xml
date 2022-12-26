@@ -91,7 +91,7 @@
     <distributionManagement>
         <repository>
             <id>nexus</id>
-            <url>http://158.160.6.130:8081/nexus/content/repositories/snapshots/</url>
+            <url>http://158.160.6.130:8081/repository/common-lib/</url>
         </repository>
     </distributionManagement>
 </project>
