@@ -1,28 +1,22 @@
 package aws;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 import software.amazon.awssdk.core.sync.RequestBody;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.*;
 import java.util.UUID;
 
+@Component
 @RequiredArgsConstructor
-@Configuration
-public class AwsService {
-
+public class AwsClient {
     private String bucket = "skillboxjava31";
 
     private String path = "https://storage.yandexcloud.net/";
 
-    private final S3Client s3;
 
-    @Bean
-    public AwsService awsService(){
-        return new AwsService(s3);
-    }
+    private final S3Client s3;
 
     public String uploadImage(MultipartFile file) throws Exception {
         String partName = UUID.randomUUID().toString();
