@@ -13,6 +13,7 @@ dto/postDto/CommentDTO$CommentDTOBuilder.class
 dto/postDto/PostDTO$PostDTOBuilder.class
 dto/postDto/TagDTO.class
 dto/userDto/PersonDTO$PersonDTOBuilder.class
+aws/annotation/EnableAwsClient.class
 dto/userDto/AddressDTO$AddressDTOBuilder.class
 constants/RoleType.class
 configuration/UMapperConfiguration.class

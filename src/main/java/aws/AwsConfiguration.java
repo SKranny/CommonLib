@@ -2,6 +2,7 @@ package aws;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.AwsCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
@@ -16,8 +17,6 @@ public class AwsConfiguration {
     private String keyId = "YCAJEStU_FVlizdLyCEEBqdgD";
 
     private String secret = "YCNNNq9Ak-P1I58T_S81SCjMqjAZolNIORVRtd17";
-
-
 
     @Bean
     public S3Client s3Client(){
