@@ -11,9 +11,9 @@ import java.util.UUID;
 @Component
 @RequiredArgsConstructor
 public class AwsClient {
-    private String bucket = "skillboxjava31/";
+    private String bucket = "skillboxjava31";
 
-    private String path = "https://storage.yandexcloud.net/";
+    private String path = "https://storage.yandexcloud.net/skillboxjava31/";
 
 
     private final S3Client s3;
@@ -24,6 +24,6 @@ public class AwsClient {
                     .bucket(bucket)
                     .key(partName + file.getOriginalFilename())
                     .build(), RequestBody.fromBytes(file.getBytes()));
-        return path + bucket + partName + file.getOriginalFilename();
+        return path + partName + file.getOriginalFilename();
     }
 }
