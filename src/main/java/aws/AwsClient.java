@@ -26,4 +26,11 @@ public class AwsClient {
                     .build(), RequestBody.fromBytes(file.getBytes()));
         return path + partName + file.getOriginalFilename();
     }
+
+    public void deleteImage(String key){
+        DeleteObjectResponse deleteObjectResponse = s3.deleteObject(DeleteObjectRequest.builder()
+                .bucket(bucket)
+                .key(key)
+                .build());
+    }
 }
