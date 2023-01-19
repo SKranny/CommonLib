@@ -34,12 +34,12 @@ public class KafkaConfig {
     }
 
     @Bean
-    public ProducerFactory<Long, Event> producerFactory(){
+    public ProducerFactory<Long, Event<?>> producerFactory(){
         return new DefaultKafkaProducerFactory<>(producerConfig());
     }
 
     @Bean
-    public KafkaTemplate<Long, Event> kafkaTemplate(){
+    public KafkaTemplate<Long, Event<?>> kafkaTemplate(){
         return new KafkaTemplate<>(producerFactory());
     }
 
@@ -55,13 +55,13 @@ public class KafkaConfig {
     }
 
     @Bean
-    public ConsumerFactory<Long, Event> consumerFactory(){
+    public ConsumerFactory<Long, Event<?>> consumerFactory(){
         return new DefaultKafkaConsumerFactory<>(consumerConfig());
     }
 
     @Bean
     public KafkaListenerContainerFactory<?> kafkaListenerContainerFactory(){
-        ConcurrentKafkaListenerContainerFactory<Long, Event> factory =
+        ConcurrentKafkaListenerContainerFactory<Long, Event<?>> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
         return factory;
