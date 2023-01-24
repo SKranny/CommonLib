@@ -68,7 +68,7 @@ public class PersonDTO {
 
     private LocalDateTime updatedOn;
 
-    private AddressDTO address;
+    private String address;
 
     private String password;
 }
