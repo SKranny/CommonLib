@@ -1,6 +1,7 @@
 package kafka.annotation;
 
 import kafka.KafkaConfig;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
 import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.stereotype.Indexed;
@@ -12,6 +13,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
+@EnableAspectJAutoProxy
 @EnableKafka
 @Indexed
 @Import({KafkaConfig.class})

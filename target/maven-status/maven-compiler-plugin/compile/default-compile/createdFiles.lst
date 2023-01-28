@@ -4,7 +4,6 @@ kafka/annotation/EnableKafkaClient.class
 dto/authDto/auth/LoginRequest$LoginRequestBuilder.class
 dto/postDto/PostDTO.class
 dto/authDto/auth/CaptchaResponse$CaptchaResponseBuilder.class
-dto/userDto/AddressDTO.class
 dto/authDto/auth/CaptchaResponse.class
 dto/postDto/TagDTO$TagDTOBuilder.class
 dto/notification/NotificationDTO$NotificationDTOBuilder.class
@@ -20,7 +19,6 @@ dto/postDto/TagDTO.class
 dto/userDto/PersonDTO$PersonDTOBuilder.class
 aws/annotation/EnableAwsClient.class
 dto/notification/SettingsDTO$SettingsDTOBuilder.class
-dto/userDto/AddressDTO$AddressDTOBuilder.class
 dto/notification/ContentDTO.class
 constants/RoleType.class
 constants/NotificationType.class
@@ -35,7 +33,9 @@ aws/AwsClient.class
 dto/notification/ContentDTO$ContentDTOBuilder.class
 kafka/dto/Event$EventBuilder.class
 kafka/KafkaConfig.class
+kafka/KafkaAspect.class
 dto/notification/SettingsDTO.class
 dto/notification/AttachDTO.class
 constants/StatusCode.class
 dto/authDto/auth/LoginRequest.class
+kafka/SendToKafka.class

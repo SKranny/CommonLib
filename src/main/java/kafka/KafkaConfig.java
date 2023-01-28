@@ -1,5 +1,6 @@
 package kafka;
 
+import kafka.aspect.KafkaAspect;
 import kafka.dto.Event;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -25,6 +26,7 @@ public class KafkaConfig {
     @Value("${spring.kafka.bootstrap-servers}")
     private String server;
 
+    @Bean
     public Map<String, Object> producerConfig() {
         Map<String, Object> props = new HashMap<>();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, server);
@@ -67,4 +69,8 @@ public class KafkaConfig {
         return factory;
     }
 
+    @Bean
+    public KafkaAspect kafkaAspect() {
+        return new KafkaAspect(kafkaTemplate());
+    }
 }
