@@ -1,5 +1,6 @@
 package dto.friendDto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import constants.NotificationType;
 import dto.notification.ContentDTO;
 import lombok.AllArgsConstructor;
@@ -18,7 +19,7 @@ public class FriendsNotificationRequest {
     private Long dstPersonId;
 
     private ContentDTO content;
-
+    @JsonProperty("notificationType")
     private NotificationType type;
 
 }
