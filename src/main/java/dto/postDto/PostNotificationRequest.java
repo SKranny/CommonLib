@@ -2,6 +2,7 @@ package dto.postDto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import constants.NotificationType;
+import dto.notification.ContentDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,5 +19,7 @@ public class PostNotificationRequest {
 
     @JsonProperty("notificationType")
     private NotificationType type;
+
+    private ContentDTO content;
 
 }
