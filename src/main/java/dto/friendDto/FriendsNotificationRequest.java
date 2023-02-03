@@ -1,5 +1,6 @@
 package dto.friendDto;
 
+import constants.NotificationType;
 import dto.notification.ContentDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,5 +18,7 @@ public class FriendsNotificationRequest {
     private Long dstPersonId;
 
     private ContentDTO content;
+
+    private NotificationType type;
 
 }
