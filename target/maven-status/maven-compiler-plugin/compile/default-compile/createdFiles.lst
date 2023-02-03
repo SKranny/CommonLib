@@ -5,6 +5,7 @@ dto\authDto\auth\LoginRequest.class
 dto\postDto\PostNotificationRequest.class
 security\utils\TokenUtil.class
 constants\RoleType.class
+dto\userDto\PersonNotificationRequest.class
 feignClient\FeignRequestInterceptor.class
 dto\friendDto\FriendshipDTO.class
 security\dto\TokenData.class
@@ -28,6 +29,7 @@ dto\authDto\auth\LoginRequest$LoginRequestBuilder.class
 kafka\annotation\SubmitToKafka.class
 feignClient\EnableFeignClient.class
 dto\postDto\PostDTO$PostDTOBuilder.class
+dto\friendDto\FriendsNotificationRequest$FriendsNotificationRequestBuilder.class
 security\dto\TokenData$TokenDataBuilder.class
 dto\notification\SettingsDTO$SettingsDTOBuilder.class
 dto\notification\SettingsDTO.class
@@ -38,12 +40,14 @@ dto\notification\ContentDTO$ContentDTOBuilder.class
 constants\FriendshipStatusCode.class
 kafka\KafkaConfig.class
 configuration\UMapperConfiguration.class
+dto\friendDto\FriendsNotificationRequest.class
 security\TokenAuthentication.class
 constants\MessagesPermission.class
 configuration\UCollectionMapper.class
 security\utils\JwtService.class
 constants\StatusCode.class
 aws\annotation\EnableAwsClient.class
+dto\userDto\PersonNotificationRequest$PersonNotificationRequestBuilder.class
 kafka\aspect\KafkaAspect.class
 kafka\dto\Event$EventBuilder.class
 security\JwtPerRequestFilter.class

@@ -1,6 +1,7 @@
 C:\common-lib\src\main\java\security\JwtPerRequestFilter.java
 C:\common-lib\src\main\java\security\EnableMicroserviceSecurity.java
 C:\common-lib\src\main\java\constants\NotificationType.java
+C:\common-lib\src\main\java\dto\userDto\PersonNotificationRequest.java
 C:\common-lib\src\main\java\constants\StatusCode.java
 C:\common-lib\src\main\java\security\utils\TokenUtil.java
 C:\common-lib\src\main\java\dto\authDto\auth\LoginRequest.java
@@ -38,3 +39,4 @@ C:\common-lib\src\main\java\constants\FriendshipStatusCode.java
 C:\common-lib\src\main\java\dto\notification\ContentDTO.java
 C:\common-lib\src\main\java\constants\RoleType.java
 C:\common-lib\src\main\java\dto\userDto\PersonDTO.java
+C:\common-lib\src\main\java\dto\friendDto\FriendsNotificationRequest.java

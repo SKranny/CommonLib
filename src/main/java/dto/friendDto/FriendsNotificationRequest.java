@@ -1,5 +1,6 @@
 package dto.friendDto;
 
+import dto.notification.ContentDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,5 +15,7 @@ public class FriendsNotificationRequest {
     private Long srcPersonId;
 
     private Long dstPersonId;
+
+    private ContentDTO content;
 
 }
