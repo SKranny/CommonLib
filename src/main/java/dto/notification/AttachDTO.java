@@ -15,5 +15,5 @@ public class AttachDTO {
 
     private AttachType type;
 
-    private String text;
+    private String link;
 }
