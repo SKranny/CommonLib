@@ -14,9 +14,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FriendsNotificationRequest {
 
-    private Long srcPersonId;
+    private Long authorId;
 
-    private Long dstPersonId;
+    private Long recipientId;
 
     private ContentDTO content;
     @JsonProperty("notificationType")
