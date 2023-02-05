@@ -8,6 +8,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -16,6 +18,8 @@ public class PostNotificationRequest {
     private Long authorId;
 
     private String title;
+
+    private List<Long> friendsId;
 
     @JsonProperty("notificationType")
     private NotificationType type;

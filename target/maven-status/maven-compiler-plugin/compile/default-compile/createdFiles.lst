@@ -20,6 +20,7 @@ kafka\dto\Event.class
 dto\notification\AttachDTO.class
 dto\postDto\TagDTO.class
 dto\userDto\PersonDTO$PersonDTOBuilder.class
+dto\friendDto\FriendDTO.class
 dto\postDto\CommentDTO$CommentDTOBuilder.class
 dto\authDto\auth\CaptchaResponse.class
 dto\postDto\TagDTO$TagDTOBuilder.class

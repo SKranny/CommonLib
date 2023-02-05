@@ -25,6 +25,7 @@ C:\common-lib\src\main\java\feignClient\EnableFeignClient.java
 C:\common-lib\src\main\java\constants\MessagesPermission.java
 C:\common-lib\src\main\java\aws\annotation\EnableAwsClient.java
 C:\common-lib\src\main\java\aws\AwsClient.java
+C:\common-lib\src\main\java\dto\friendDto\FriendDTO.java
 C:\common-lib\src\main\java\feignClient\FeignRequestInterceptor.java
 C:\common-lib\src\main\java\kafka\annotation\SubmitToKafka.java
 C:\common-lib\src\main\java\dto\friendDto\FriendshipStatusDTO.java
