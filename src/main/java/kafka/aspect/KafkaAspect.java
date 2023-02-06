@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
 import java.util.Arrays;
 
 @Aspect
@@ -33,6 +34,7 @@ public class KafkaAspect {
     private Event<?> buildEvent(Object obj) {
         return Event.builder()
                 .serviceName(serviceName)
+                .time(LocalDateTime.now())
                 .content(obj)
                 .build();
     }
