@@ -22,4 +22,10 @@ public class PostDTO {
     private String postText;
     @Schema(description = "Состояние блокировки поста")
     private Boolean isBlocked;
+
+    @Schema(description = "Статус удаления поста")
+    private Boolean isDelete;
+
+    @Schema(description = "Состояние по друзьям")
+    private Boolean withFriends;
 }
