@@ -1,7 +1,6 @@
 package kafka;
 
 import kafka.aspect.KafkaAspect;
-import kafka.dto.Event;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.LongDeserializer;
@@ -36,12 +35,12 @@ public class KafkaConfig {
     }
 
     @Bean
-    public ProducerFactory<Long, Event<?>> producerFactory(){
+    public ProducerFactory<Long, Object> producerFactory(){
         return new DefaultKafkaProducerFactory<>(producerConfig());
     }
 
     @Bean
-    public KafkaTemplate<Long, Event<?>> kafkaTemplate(){
+    public KafkaTemplate<Long, Object> kafkaTemplate(){
         return new KafkaTemplate<>(producerFactory());
     }
 
@@ -57,13 +56,13 @@ public class KafkaConfig {
     }
 
     @Bean
-    public ConsumerFactory<Long, Event<?>> consumerFactory(){
+    public ConsumerFactory<Long, Object> consumerFactory(){
         return new DefaultKafkaConsumerFactory<>(consumerConfig());
     }
 
     @Bean
     public KafkaListenerContainerFactory<?> kafkaListenerContainerFactory(){
-        ConcurrentKafkaListenerContainerFactory<Long, Event<?>> factory =
+        ConcurrentKafkaListenerContainerFactory<Long, ?> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
         return factory;

@@ -1,42 +1,30 @@
 package kafka.aspect;
 
 import kafka.annotation.SubmitToKafka;
-import kafka.dto.Event;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
 import java.util.Arrays;
 
 @Aspect
+@Slf4j
 @Component
 @RequiredArgsConstructor
 public class KafkaAspect {
-    @Value("spring.application.name")
-    private String serviceName;
-
-    private final KafkaTemplate<Long, Event<?>> kafkaTemplate;
+    private final KafkaTemplate<Long, Object> kafkaTemplate;
 
     @SneakyThrows
     @Around("@annotation(submitToKafka)")
     public Object dt (ProceedingJoinPoint joinPoint, SubmitToKafka submitToKafka) {
         Object res = joinPoint.proceed();
-        Arrays.stream(submitToKafka.topic()).forEach(topic -> kafkaTemplate.send(topic, buildEvent(res)));
+        Arrays.stream(submitToKafka.topic()).forEach(topic -> kafkaTemplate.send(topic, res));
+        log.info(String.format("Object [%s] has been submitted!", res));
         return res;
     }
-
-    private Event<?> buildEvent(Object obj) {
-        return Event.builder()
-                .serviceName(serviceName)
-                .time(LocalDateTime.now())
-                .content(obj)
-                .build();
-    }
-
 }
