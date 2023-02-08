@@ -5,21 +5,27 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.Set;
 
 @Data
-@Schema(description = "Сообщение")
+@Schema(description = "Посты")
 @Builder
 public class PostDTO {
     @Schema(description = "Идентификатор")
     private Long id;
+
     @Schema(description = "Время создания поста")
     private Date time;
+
     @Schema(description = "Идентификатор автора")
     private Long authorId;
+
     @Schema(description = "Заголовок")
     private String title;
+
     @Schema(description = "Текст поста")
     private String postText;
+
     @Schema(description = "Состояние блокировки поста")
     private Boolean isBlocked;
 
@@ -28,4 +34,7 @@ public class PostDTO {
 
     @Schema(description = "Состояние по друзьям")
     private Boolean withFriends;
+
+    @Schema(description = "Список тегов")
+    private Set<TagDTO> tags;
 }
