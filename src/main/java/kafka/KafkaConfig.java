@@ -52,6 +52,8 @@ public class KafkaConfig {
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
         props.put(JsonDeserializer.TRUSTED_PACKAGES, "*");
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, LongDeserializer.class);
+        props.put(ConsumerConfig.HEARTBEAT_INTERVAL_MS_CONFIG, 30000);
+        props.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, 90000);
         return props;
     }
 
