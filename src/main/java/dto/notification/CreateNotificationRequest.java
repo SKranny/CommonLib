@@ -5,7 +5,7 @@ import constants.NotificationType;
 import lombok.Data;
 
 @Data
-public class CreateNotificationRequest {
+public class CreateNotificationRequest implements NotificationRequest {
     private Long authorId;
 
     private Long recipientId;
