@@ -3,6 +3,7 @@ package dto.friendDto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import constants.NotificationType;
 import dto.notification.ContentDTO;
+import dto.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class FriendsNotificationRequest {
+public class FriendsNotificationRequest implements NotificationRequest {
 
     private Long authorId;
 
