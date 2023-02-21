@@ -37,4 +37,9 @@ public class PostDTO {
 
     @Schema(description = "Список тегов")
     private Set<TagDTO> tags;
+
+    @Schema(description = "Мой лайк на пост")
+    private boolean myLike;
+
+
 }
