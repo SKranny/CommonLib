@@ -41,5 +41,9 @@ public class PostDTO {
     @Schema(description = "Мой лайк на пост")
     private boolean myLike;
 
+    @Schema(description = "Количество лайков на пост")
+    private Long likeAmount;
 
+    @Schema(description = "Количество комментов на пост")
+    private Long commentAmount;
 }
