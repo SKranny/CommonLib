@@ -1,14 +1,1 @@
-security/utils/TokenUtil.class
-dto/postDto/PostNotificationRequest.class
-dto/friendDto/FriendsNotificationRequest.class
-dto/friendDto/FriendDTO.class
-security/config/SecurityConfig.class
-dto/userDto/PersonNotificationRequest.class
-security/dto/TokenData$TokenDataBuilder.class
-dto/friendDto/FriendsNotificationRequest$FriendsNotificationRequestBuilder.class
-security/dto/TokenData.class
-dto/userDto/ShortPersonDTO$ShortPersonDTOBuilder.class
-dto/userDto/ShortPersonDTO.class
-dto/userDto/PersonNotificationRequest$PersonNotificationRequestBuilder.class
-security/utils/JwtService.class
-dto/postDto/PostNotificationRequest$PostNotificationRequestBuilder.class
+dto/notification/NotificationRequest.class

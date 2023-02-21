@@ -3,6 +3,7 @@ package dto.postDto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import constants.NotificationType;
 import dto.notification.ContentDTO;
+import dto.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +15,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class PostNotificationRequest {
+public class PostNotificationRequest implements NotificationRequest {
     private Long authorId;
 
     private String title;
