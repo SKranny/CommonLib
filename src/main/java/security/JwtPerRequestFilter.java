@@ -31,6 +31,9 @@ public class JwtPerRequestFilter extends OncePerRequestFilter {
         } else if (request.getQueryString().contains("token") && request.getServletPath().equals("/messenger")) {
             TokenAuthentication authentication = new TokenAuthentication(jwtService.parseToken(request.getQueryString().split("=")[1]));
             SecurityContextHolder.getContext().setAuthentication(authentication);
+        } else if (request.getQueryString().contains("token") && request.getServletPath().equals("/notification")) {
+            TokenAuthentication authentication = new TokenAuthentication(jwtService.parseToken(request.getQueryString().split("=")[1]));
+            SecurityContextHolder.getContext().setAuthentication(authentication);
         }
 
         filterChain.doFilter(request, response);
