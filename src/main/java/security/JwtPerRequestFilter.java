@@ -28,10 +28,12 @@ public class JwtPerRequestFilter extends OncePerRequestFilter {
         if (Optional.ofNullable(token).isPresent()) {
             TokenAuthentication authentication = new TokenAuthentication(jwtService.parseToken(token));
             SecurityContextHolder.getContext().setAuthentication(authentication);
-        } else if (request.getQueryString().contains("token") && request.getServletPath().equals("/messenger")) {
+        } else if (Optional.ofNullable(request.getQueryString()).map(query -> query.contains("token")).orElse(false)
+                && request.getServletPath().equals("/messenger")) {
             TokenAuthentication authentication = new TokenAuthentication(jwtService.parseToken(request.getQueryString().split("=")[1]));
             SecurityContextHolder.getContext().setAuthentication(authentication);
-        } else if (request.getQueryString().contains("token") && request.getServletPath().equals("/notification")) {
+        } else if (Optional.ofNullable(request.getQueryString()).map(query -> query.contains("token")).orElse(false)
+                && request.getServletPath().equals("/notification")) {
             TokenAuthentication authentication = new TokenAuthentication(jwtService.parseToken(request.getQueryString().split("=")[1]));
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
