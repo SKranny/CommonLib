@@ -26,8 +26,14 @@ public class JwtPerRequestFilter extends OncePerRequestFilter {
         String token = TokenUtil.parseToken(request);
 
         if (Optional.ofNullable(token).isPresent()) {
-            TokenAuthentication details = new TokenAuthentication(jwtService.parseToken(token));
-            SecurityContextHolder.getContext().setAuthentication(details);
+            TokenAuthentication authentication = new TokenAuthentication(jwtService.parseToken(token));
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+        } else if (request.getQueryString().contains("token") && request.getServletPath().equals("/messenger")) {
+            TokenAuthentication authentication = new TokenAuthentication(jwtService.parseToken(request.getQueryString().split("=")[1]));
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+        } else if (request.getQueryString().contains("token") && request.getServletPath().equals("/notification")) {
+            TokenAuthentication authentication = new TokenAuthentication(jwtService.parseToken(request.getQueryString().split("=")[1]));
+            SecurityContextHolder.getContext().setAuthentication(authentication);
         }
 
         filterChain.doFilter(request, response);

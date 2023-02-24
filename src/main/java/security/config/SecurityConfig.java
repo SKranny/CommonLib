@@ -21,7 +21,6 @@ import security.utils.JwtService;
 @RequiredArgsConstructor
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
-
     @Bean
     public SecurityFilterChain filterChain (@Autowired HttpSecurity http) throws Exception {
        return http
