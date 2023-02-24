@@ -11,6 +11,7 @@ import java.util.Set;
 @Schema(description = "Посты")
 @Builder
 public class PostDTO {
+
     @Schema(description = "Идентификатор")
     private Long id;
 
