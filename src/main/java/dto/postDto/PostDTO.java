@@ -11,11 +11,15 @@ import java.util.Set;
 @Schema(description = "Посты")
 @Builder
 public class PostDTO {
+
     @Schema(description = "Идентификатор")
     private Long id;
 
     @Schema(description = "Время создания поста")
     private Date time;
+
+    @Schema(description = "Время публикации поста")
+    private Date publishTime;
 
     @Schema(description = "Идентификатор автора")
     private Long authorId;
