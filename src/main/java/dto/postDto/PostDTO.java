@@ -17,6 +17,9 @@ public class PostDTO {
     @Schema(description = "Время создания поста")
     private Date time;
 
+    @Schema(description = "Время публикации поста")
+    private Date publishTime;
+
     @Schema(description = "Идентификатор автора")
     private Long authorId;
 
