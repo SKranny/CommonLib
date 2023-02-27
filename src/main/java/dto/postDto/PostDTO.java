@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Data;
 
+import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.Set;
 
@@ -19,7 +20,7 @@ public class PostDTO {
     private Date time;
 
     @Schema(description = "Время публикации поста")
-    private Date publishTime;
+    private ZonedDateTime publishTime;
 
     @Schema(description = "Идентификатор автора")
     private Long authorId;
