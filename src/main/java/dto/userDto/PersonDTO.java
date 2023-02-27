@@ -72,6 +72,5 @@ public class PersonDTO {
 
     private String password;
 
-    @JsonProperty(defaultValue = "false")
     private boolean isFriend;
 }
