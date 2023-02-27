@@ -72,5 +72,5 @@ public class PersonDTO {
 
     private String password;
 
-    private boolean isFriend;
+    private Boolean isFriend;
 }
