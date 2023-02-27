@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 @Data
 @Schema(description = "Комментарий")
@@ -15,9 +16,9 @@ public class CommentDTO {
     @Schema(description = "Идентификатор поста")
     private Long postId;
     @Schema(description = "Время создания комментария")
-    private LocalDateTime time;
+    private ZonedDateTime time;
     @Schema(description = "Время редактирования комментария")
-    private LocalDateTime editTime;
+    private ZonedDateTime editTime;
     @Schema(description = "Идентификатор автора")
     private Long authorId;
     @Schema(description = "Текст комментария")
