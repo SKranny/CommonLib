@@ -72,5 +72,6 @@ public class PersonDTO {
 
     private String password;
 
-    private Boolean isFriend;
+    @Builder.Default
+    private Boolean isFriend = false;
 }
