@@ -7,7 +7,7 @@ This library is designed to free the services workspace from a large number of u
 Access to the library is implemented using Nexus Repository.
 1. The first thing to do is to connect your nexus to the project by specifying it as a repository in pom.xml:
 
-	`<repositories>
+	` <repositories>
 	
 		<repository>
 		
@@ -17,6 +17,6 @@ Access to the library is implemented using Nexus Repository.
 			
 		</repository>
 		
-	</repositories>`
+	</repositories> `
 	
 In order to connect this library to your project, just specify it as dependency in pom.xml and pull up this new dependency.
