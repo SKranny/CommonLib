@@ -16,4 +16,11 @@ Access to the library is implemented using Nexus Repository.
 	</repositories>
 	```
 	
-2. In order to connect this library to your project, just specify it as dependency in pom.xml and pull up this new dependency.
+2. To connect this library to your project, simply specify it as a dependency in pom.xml and pull up this new dependency:
+	```
+	<dependency>
+		<groupId>org.example</groupId>
+		<artifactId>common-lib</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</dependency>
+	```
