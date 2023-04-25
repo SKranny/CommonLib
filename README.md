@@ -9,13 +9,13 @@ Access to the library is implemented using Nexus Repository.
 
 `<repositories>
 
-	<repository>
+<repository>
 		
-		<id>nexus</id>
+	<id>nexus</id>
 			
-		<url>http://158.160.6.130:8081/nexus/content/repositories/snapshots/</url>
+	<url>http://158.160.6.130:8081/nexus/content/repositories/snapshots/</url>
 			
-	</repository>
+</repository>
 	
 </repositories>`
 	
